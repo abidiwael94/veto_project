@@ -19,6 +19,7 @@ public class WebSecurityConfig {
                 .authorizeHttpRequests()
                 .requestMatchers("/api/**").permitAll() // Allow public API access for testing
                 .requestMatchers("/login", "/signup", "/css/**", "/js/**").permitAll() // Public HTML routes
+                .requestMatchers("/forgot-password", "/reset-password").permitAll()
                 .anyRequest().authenticated() // Protect other routes
                 .and()
                 .formLogin()

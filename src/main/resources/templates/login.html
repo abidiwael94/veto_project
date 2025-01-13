@@ -7,7 +7,7 @@
 <h1>Login</h1>
 
 <!-- Display error message if any -->
-<p th:if="${error}" th:text="${error}" style="color:red;"></p> <!-- Display error message here -->
+<p th:if="${error}" th:text="${error}" style="color:red;"></p>
 
 <form th:action="@{/login}" th:object="${loginRequest}" method="post">
     <label for="username">Username:</label>
@@ -18,6 +18,9 @@
     <br />
     <button type="submit">Login</button>
 </form>
+
+<!-- Forgot Password Link -->
+<a href="/forgot-password">Forgot your password?</a>
 
 </body>
 </html>
